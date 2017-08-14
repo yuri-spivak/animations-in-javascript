@@ -17,7 +17,7 @@ Or you can connect the minified version of the plugin by adding the following li
 ## Run the function
 
 ```ruby
-new Animate(parameters);
+new Animate({parameters});
 ```
 
 ## Function Parameters
@@ -61,14 +61,14 @@ The function is called when the animation is completed.
    Example:
 
    ```ruby
-   var Anim = new Animate(parameters);
+   var Anim = new Animate({parameters});
    Anim.stop();
    ```
 
    Or:
 
    ```ruby
-   var Anim = new Animate(parameters);
+   var Anim = new Animate({parameters});
    window.animateStop(Anim);
    ```
 
@@ -78,14 +78,14 @@ The function is called when the animation is completed.
    Example:
 
     ```ruby
-   var Anim = new Animate(parameters);
+   var Anim = new Animate({parameters});
    Anim.pause();
    ```
 
    Or:
 
    ```ruby
-   var Anim = new Animate(parameters);
+   var Anim = new Animate({parameters});
    window.animatePause(Anim);
    ```
 
@@ -95,13 +95,13 @@ The function is called when the animation is completed.
    Example:
 
    ```ruby
-   var Anim = new Animate(parameters);
+   var Anim = new Animate({parameters});
    Anim.play();
    ```
 
    Or:
 
    ```ruby
-   var Anim = new Animate(parameters);
+   var Anim = new Animate({parameters});
    window.animatePlay(Anim);
    ```

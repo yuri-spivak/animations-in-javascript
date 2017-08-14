@@ -22,7 +22,7 @@ new Animate(parameters);
 
 ## Function Parameters
 
-**duration** (default: `1200`)  
+ - **duration** (default: `1200`)  
 *Type: Number or String*  
 A string or number determining how long the animation will run.
 

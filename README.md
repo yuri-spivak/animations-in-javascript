@@ -22,35 +22,35 @@ new Animate(parameters);
 
 ## Function Parameters
 
-**duration** (default: `1200`)
-*Type: Number or String*
+**duration** (default: `1200`)  
+*Type: Number or String*  
 A string or number determining how long the animation will run.
 
-**easing** (default: `linear`)
-*Type: Array or String*
+**easing** (default: `linear`)  
+*Type: Array or String*  
 A string indicating which easing function to use for the transition.
 
 *List of standard values:* "ease", "ease-in", "ease-out", "ease-in-out", "linear".
 *How to specify the array correctly?* The array should be specified as "cubic-bezier" in CSS. Example: `easing: [0.215, 0.61, 0.355, 1]`
 
-**list** (default: `true`)
-*Type: Boolean*
+**list** (default: `true`)  
+*Type: Boolean*  
 When the animation starts, it is added to the `window.animateList` list, which is stored until the end animation. With this option, you can turn off adding an animation to the list.
 
-**start**
-*Type: Function ()*
+**start**  
+*Type: Function ()*  
 A function to call when the animation begins.
 
-**step**
-*Type: Function ( Number )*
+**step**  
+*Type: Function ( Number )*  
 A function is called at each step of the change. Returns the percentage of animation completion.
 
-**complete**
-*Type: Function ()*
+**complete**  
+*Type: Function ()*  
 The function is called when the animation is fully completed.
 
-**done**
-*Type: Function ()*
+**done**  
+*Type: Function ()*  
 The function is called when the animation is completed.
 
 ## Additional animation functions

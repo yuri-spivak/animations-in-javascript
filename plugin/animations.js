@@ -217,7 +217,7 @@
 
             /** Start a functions "complete" and "done"; Removing an animation from the list */
             if (timeFraction === 1) {
-                if (parameters.queue !== false) window.animateList.splice(window.animateList.indexOf(Animation), 1);
+                if (parameters.list !== false) window.animateList.splice(window.animateList.indexOf(Animation), 1);
 
                 if (parameters.complete && typeof parameters.complete === 'function') parameters.complete();
                 if (parameters.done && typeof parameters.done === 'function') parameters.done();
@@ -230,7 +230,7 @@
         requestAnimationFrame(Animation);
 
         /** Add animation to List */
-        if (parameters.queue !== false) window.animateList.push(Animation);
+        if (parameters.list !== false) window.animateList.push(Animation);
 
         /** Start the function "start" */
         if (parameters.start && typeof parameters.start === 'function') parameters.start();
@@ -242,7 +242,7 @@
                 _this.resolution = false;
 
                 /** Removing an animation from the list */
-                if (parameters.queue !== false) window.animateList.splice(window.animateList.indexOf(Animation), 1);
+                if (parameters.list !== false) window.animateList.splice(window.animateList.indexOf(Animation), 1);
 
                 /** Start the function "done" */
                 if (parameters.done && typeof parameters.done === 'function') parameters.done();

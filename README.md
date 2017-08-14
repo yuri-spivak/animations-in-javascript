@@ -30,8 +30,8 @@ A string or number determining how long the animation will run.
 *Type: Array or String*  
 A string indicating which easing function to use for the transition.
 
-   *List of standard values:* `ease`, `ease-in`, `ease-out`, `ease-in-out`, `linear`.
-*How to specify the array correctly?* The array should be specified as "cubic-bezier" in CSS. *Example:* `easing: [0.215, 0.61, 0.355, 1]`
+   *List of standard values:* `ease`, `ease-in`, `ease-out`, `ease-in-out`, `linear`.   
+   *How to specify the array correctly?* The array should be specified as "cubic-bezier" in CSS. *Example:* `easing: [0.215, 0.61, 0.355, 1]`
 
  - **list** (default: `true`)  
 *Type: Boolean*  

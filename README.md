@@ -58,16 +58,16 @@ The function is called when the animation is completed.
  - **stop**  
 Stopping the function  
 
-Example:
+   Example:
 
-```ruby
+   ```ruby
 var Anim = new Animate(parameters);
 Anim.stop();
 ```
 
-Or:
+   Or:
 
-```ruby
+   ```ruby
 var Anim = new Animate(parameters);
 window.animateStop(Anim);
 ```
@@ -75,16 +75,16 @@ window.animateStop(Anim);
  - **pause**  
 Temporarily stops animation  
 
-Example:
+   Example:
 
-```ruby
+   ```ruby
 var Anim = new Animate(parameters);
 Anim.pause();
 ```
 
-Or:
+   Or:
 
-```ruby
+   ```ruby
 var Anim = new Animate(parameters);
 window.animatePause(Anim);
 ```
@@ -92,16 +92,16 @@ window.animatePause(Anim);
  - **play**  
 Running an animation after a temporary halt  
 
-Example:
+   Example:
 
-```ruby
+   ```ruby
 var Anim = new Animate(parameters);
 Anim.play();
 ```
 
-Or:
+   Or:
 
-```ruby
+   ```ruby
 var Anim = new Animate(parameters);
 window.animatePlay(Anim);
 ```

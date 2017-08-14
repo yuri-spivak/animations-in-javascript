@@ -56,52 +56,52 @@ The function is called when the animation is completed.
 ## Additional animation functions
 
  - **stop**  
-Stopping the function  
+   Stopping the function  
 
    Example:
 
    ```ruby
-var Anim = new Animate(parameters);
-Anim.stop();
-```
+   var Anim = new Animate(parameters);
+   Anim.stop();
+   ```
 
    Or:
 
    ```ruby
-var Anim = new Animate(parameters);
-window.animateStop(Anim);
-```
+   var Anim = new Animate(parameters);
+   window.animateStop(Anim);
+   ```
 
  - **pause**  
-Temporarily stops animation  
+   Temporarily stops animation  
 
    Example:
 
-   ```ruby
-var Anim = new Animate(parameters);
-Anim.pause();
-```
+    ```ruby
+   var Anim = new Animate(parameters);
+   Anim.pause();
+   ```
 
    Or:
 
    ```ruby
-var Anim = new Animate(parameters);
-window.animatePause(Anim);
-```
+   var Anim = new Animate(parameters);
+   window.animatePause(Anim);
+   ```
 
  - **play**  
-Running an animation after a temporary halt  
+   Running an animation after a temporary halt  
 
    Example:
 
    ```ruby
-var Anim = new Animate(parameters);
-Anim.play();
-```
+   var Anim = new Animate(parameters);
+   Anim.play();
+   ```
 
    Or:
 
    ```ruby
-var Anim = new Animate(parameters);
-window.animatePlay(Anim);
-```
+   var Anim = new Animate(parameters);
+   window.animatePlay(Anim);
+   ```

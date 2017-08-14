@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <!-- Function -->
+    <script src="../plugin/animations.js"></script>
+    <!-- End:Function -->
+    <style>
+        .target {
+            width: 200px;
+            height: 24px;
+            margin: 0 auto;
+            border: 2px solid blue;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var animation = new Animate({
+                duration: 10000,
+                easing: [0.68, -0.55, 0.265, 1.55],
+                queue: true,
+                start: function () {
+                    console.log('Animation started!');
+                },
+                step: function (v) {
+                    document.querySelector('.target').style.width = (200 + (400 * v)) + 'px';
+                },
+                complete: function () {
+                    console.log('The animation is completely over!');
+                },
+                done: function () {
+                    console.log('Animation complete!');
+                }
+            });
+
+            setTimeout(function () {
+                animation.pause();
+            }, 5000);
+
+            setTimeout(function () {
+                animation.play();
+            }, 10000);
+
+        }, false);
+    </script>
+</head>
+<body>
+    <div class="target">
+    </div>
+</body>
+</html>

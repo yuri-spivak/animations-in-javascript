@@ -11,7 +11,7 @@ To connect the plugin, you need to add the following line to the "head" tag:
 Or you can connect the minified version of the plugin by adding the following line to the tag "head":
 
 ```ruby
-<script type="text/javascript" src="dir/animations.js"></script>
+<script type="text/javascript" src="dir/animations.min.js"></script>
 ```
 
 ## Run the function

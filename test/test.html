@@ -9,46 +9,91 @@
     <script src="../plugin/animations.js"></script>
     <!-- End:Function -->
     <style>
-        .target {
+        h3 {
             width: 200px;
-            height: 24px;
+            margin: 0 auto;
+        }
+        .line {
+            width: 200px;
+            height: 12px;
             margin: 0 auto;
             border: 2px solid blue;
         }
+
+        .bar {
+            width: 0;
+            height: 12px;
+            background-color: red;
+        }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var animation = new Animate({
-                duration: 10000,
-                easing: [0.68, -0.55, 0.265, 1.55],
-                list: true,
-                start: function () {
-                    console.log('Animation started!');
-                },
-                step: function (v) {
-                    document.querySelector('.target').style.width = (200 + (400 * v)) + 'px';
-                },
-                complete: function () {
-                    console.log('The animation is completely over!');
-                },
-                done: function () {
-                    console.log('Animation complete!');
-                }
-            });
-
-            setTimeout(function () {
-                animation.pause();
-            }, 5000);
-
-            setTimeout(function () {
-                animation.play();
-            }, 10000);
-
-        }, false);
-    </script>
 </head>
 <body>
-    <div class="target">
-    </div>
+    <h3>Normal animation:</h3>
+    <div class="line" id="animate-0"><div class="bar"></div></div>
+    <script>
+        new Animate({
+            duration: 10000,
+            step: function (p) {
+                document.querySelector('#animate-0 .bar').style.width = (p * 100) + '%';
+            }
+        });
+    </script>
+    <br>
+    <h3>Animation with another standard "easing":</h3>
+    <div class="line" id="animate-1"><div class="bar"></div></div>
+    <script>
+        new Animate({
+            duration: 10000,
+            easing: 'ease-in-out',
+            step: function (p) {
+                document.querySelector('#animate-1 .bar').style.width = (p * 100) + '%';
+            }
+        });
+    </script>
+    <br>
+    <h3>Animation with another "easing":</h3>
+    <div class="line" id="animate-2"><div class="bar"></div></div>
+    <script>
+        new Animate({
+            duration: 10000,
+            easing: [.95,1.45,.86,-0.84],
+            step: function (p) {
+                document.querySelector('#animate-2 .bar').style.width = (p * 100) + '%';
+            }
+        });
+    </script>
+    <br>
+    <h3>Animation with a pause:</h3>
+    <div class="line" id="animate-3"><div class="bar"></div></div>
+    <script>
+        var Anim = new Animate({
+            duration: 10000,
+            step: function (p) {
+                document.querySelector('#animate-3 .bar').style.width = (p * 100) + '%';
+            }
+        });
+
+        setTimeout(function () {
+            Anim.pause();
+        }, 3000);
+
+        setTimeout(function () {
+            Anim.play();
+        }, 6000);
+    </script>
+    <br>
+    <h3>Animation with color change on completion:</h3>
+    <div class="line" id="animate-4"><div class="bar"></div></div>
+    <script>
+        new Animate({
+            duration: 10000,
+            step: function (p) {
+                document.querySelector('#animate-4 .bar').style.width = (p * 100) + '%';
+            },
+            complete: function () {
+                document.querySelector('#animate-4 .bar').style.backgroundColor = 'yellow';
+            }
+        });
+    </script>
 </body>
 </html>

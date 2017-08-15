@@ -175,20 +175,18 @@
 
         /** Verification of parameter duration  */
         parameters.duration = /^\d+$/.test(parameters.duration) ? Number(parameters.duration) : 1200;
-        
-        _this.duration = parameters.duration;
 
         /** Start the animation */
         var Animation = function (T) {
             /** Resolution check */
             if (!_this.resolution) return;
 
-            var timeFraction = ((T - _this.startTime) / _this.duration) + _this.pauseTime;
+            var timeFraction = ((T - _this.startTime) / parameters.duration) + _this.pauseTime;
             if (timeFraction > 1) timeFraction = 1;
             if (timeFraction < 0) timeFraction = 0;
 
             /** Pause check */
-            if (_this.pause) {
+            if (_this.pause === true) {
                 /** Record the pause time */
                 _this.pauseTime = timeFraction;
                 /** End the function */
@@ -256,8 +254,6 @@
                 _this.startTime = performance.now();
                 /** Delete pause */
                 _this.pause = false;
-                /** Record the new duration */
-                _this.duration *= _this.pauseTime;
 
                 requestAnimationFrame(Animation);
             },

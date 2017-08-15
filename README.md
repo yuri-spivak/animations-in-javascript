@@ -1,6 +1,8 @@
 # Animations-in-javascript
 With this plugin you can create animations in pure JavaScript.
 
+You can see the plugin work by clicking on the link: https://codepen.io/yuri-spivak/full/eEeYYx/
+
 ## Connect function
 
 To connect the plugin, you need to add the following line to the "head" tag:
